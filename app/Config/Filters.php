@@ -76,8 +76,9 @@ class Filters extends BaseFilters
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',
-            'csrf',
         ],
+
+
         'after' => [
             'toolbar',
             // 'honeypot',
@@ -110,4 +111,13 @@ class Filters extends BaseFilters
      * @var array<string, array<string, list<string>>>
      */
     public array $filters = [];
+
+    public function __construct()
+    {
+        parent::__construct();
+        if (ENVIRONMENT !== 'testing') {
+            $this->globals['before'][] = 'csrf';
+        }
+    }
 }
+

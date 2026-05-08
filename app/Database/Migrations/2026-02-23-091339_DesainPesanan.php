@@ -40,7 +40,8 @@ class DesainPesanan extends Migration
         // Menambahkan Index pada 'id_pesanan' seperti yang ada di gambar (BTREE)
         $this->forge->addKey('id_pesanan');
 
-        $this->forge->createTable('desain_pesanan');
+        $this->forge->createTable('desain_pesanan', true);
+
     }
 
     public function down()

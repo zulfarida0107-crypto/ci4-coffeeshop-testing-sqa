@@ -44,7 +44,8 @@ class User extends Migration
         // Menambahkan Index Unik untuk 'username' seperti di gambar
         $this->forge->addKey('username', false, true);
 
-        $this->forge->createTable('user');
+        $this->forge->createTable('user', true);
+
     }
 
     public function down()

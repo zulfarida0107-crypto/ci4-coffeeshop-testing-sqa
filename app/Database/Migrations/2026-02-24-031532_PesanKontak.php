@@ -41,7 +41,8 @@ class PesanKontak extends Migration
         ]);
 
         $this->forge->addKey('id', true);
-        $this->forge->createTable('pesan_kontak');
+        $this->forge->createTable('pesan_kontak', true);
+
     }
 
     public function down()

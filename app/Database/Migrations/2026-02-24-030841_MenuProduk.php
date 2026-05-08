@@ -37,7 +37,8 @@ class MenuProduk extends Migration
         ]);
 
         $this->forge->addKey('id', true);
-        $this->forge->createTable('menu_produk');
+        $this->forge->createTable('menu_produk', true);
+
     }
 
     public function down()

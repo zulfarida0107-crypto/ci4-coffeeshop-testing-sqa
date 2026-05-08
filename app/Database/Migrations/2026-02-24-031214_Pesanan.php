@@ -53,7 +53,8 @@ class Pesanan extends Migration
         // Menambahkan Index untuk 'id_produk' agar bisa jadi Foreign Key nantinya
         $this->forge->addKey('id_produk');
 
-        $this->forge->createTable('pesanan');
+        $this->forge->createTable('pesanan', true);
+
     }
 
     public function down()

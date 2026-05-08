@@ -34,7 +34,6 @@
         <const name="CONFIGPATH" value="./app/Config/"/>
         <const name="PUBLICPATH" value="./public/"/>
 
-        <!-- KONFIGURASI DATABASE TESTING (DIUBAH KE MYSQL) -->
         <env name="database.tests.hostname" value="localhost"/>
         <env name="database.tests.database" value="coffeeshop_test"/>
         <env name="database.tests.username" value="root"/>
