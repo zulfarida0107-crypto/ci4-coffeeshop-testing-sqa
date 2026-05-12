@@ -1,0 +1,18 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = https://github.com/zulfarida0107-crypto/CI4-coffeeshop-admin-dashboard.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "perubahan-tema-UI-dari-gelap-ke-terang"]
+	remote = origin
+	merge = refs/heads/perubahan-tema-UI-dari-gelap-ke-terang
+[branch "penambahkan-testing-sqa-untuk-PHPUnit-dan-Apache-JMeter"]
+	vscode-merge-base = origin/perubahan-tema-UI-dari-gelap-ke-terang
+[remote "sqa-origin"]
+	url = https://github.com/zulfarida0107-crypto/ci4-coffeeshop-testing-sqa.git
+	fetch = +refs/heads/*:refs/remotes/sqa-origin/*

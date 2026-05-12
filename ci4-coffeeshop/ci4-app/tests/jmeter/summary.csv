@@ -1,0 +1,3 @@
+Label,# Samples,Average,Min,Max,Std. Dev.,Error %,Throughput,Received KB/sec,Sent KB/sec,Avg. Bytes
+HTTP Request - Halaman Utama,300,172,125,218,15.87,0.000%,.81673,31.64,0.13,39673.0
+TOTAL,300,172,125,218,15.87,0.000%,.81673,31.64,0.13,39673.0
