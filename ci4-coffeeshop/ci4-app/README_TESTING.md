@@ -6,13 +6,15 @@ Dokumen ini berisi panduan untuk menjalankan pengujian (testing) pada proyek **K
 
 ---
 
-## 1. Persiapan Database Testing
+## 1. Persiapan Environment & Database
 
-Sebelum menjalankan pengujian, buat database khusus agar data produksi tidak terpengaruh.
+Sebelum menjalankan pengujian (baik Manual Black Box maupun Automated Testing), pastikan konfigurasi sudah tepat agar tidak terjadi *error routing* (seperti 404 Not Found):
 
-1. Buka **phpMyAdmin** dan buat database baru bernama: `coffeeshop_test`
-2. Konfigurasi database testing sudah tersedia di `phpunit.xml` (bagian `<php>`)
-3. Pastikan **XAMPP** (Apache & MySQL) dalam keadaan aktif
+1. Buka file `.env` (di dalam folder `ci4-app`).
+2. Pastikan `app.baseURL` sudah diatur ke path aplikasi XAMPP kamu secara penuh, contoh: `app.baseURL = 'http://localhost:8080/coffeeshop7-v2/ci4-coffeeshop/ci4-app/public/'`
+3. Buka **phpMyAdmin** dan buat database khusus testing bernama: `coffeeshop_test`
+4. Konfigurasi database testing sudah tersedia di `phpunit.xml` (bagian `<php>`)
+5. Pastikan **XAMPP** (Apache & MySQL) dalam keadaan aktif
 
 ---
 
@@ -129,7 +131,7 @@ Load testing digunakan untuk mensimulasikan banyak pengguna mengakses aplikasi s
 **Konfigurasi:**
 - **100 virtual users** (threads)
 - **Ramp-up:** 10 detik
-- **Target:** `http://localhost/coffeeshop7-v2/ci4-coffeeshop/ci4-app/public/`
+- **Target:** `http://localhost:8080/coffeeshop7-v2/ci4-coffeeshop/ci4-app/public/`
 
 **Cara menjalankan:**
 1. Buka aplikasi **Apache JMeter**
